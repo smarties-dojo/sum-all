@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace SumAllNumbers
 {
@@ -11,11 +12,12 @@ namespace SumAllNumbers
 
         public static int SumAll(int a, int b)
         {
+            if(a == b) return 2 * a;
             if(a > b) return SumAll(b, a);
 
-            if(a == b) return a;
-
-            return a + SumAll(a+1, b);
+            return Enumerable
+                .Range(a, b - a + 1)
+                .Sum();
         }
     }
 }
