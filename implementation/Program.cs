@@ -11,12 +11,11 @@ namespace SumAllNumbers
 
         public static int SumAll(int a, int b)
         {
-            int lowerBound = Math.Min(a, b);
-            int upperBound = Math.Max(a, b);
+            if(a > b) return SumAll(b, a);
 
             int sum = 0;
 
-            for(int i = lowerBound; i <= upperBound; i++) {
+            for(int i = a; i <= b; i++) {
                 sum += i;
             }
 
