@@ -13,13 +13,9 @@ namespace SumAllNumbers
         {
             if(a > b) return SumAll(b, a);
 
-            int sum = 0;
+            if(a == b) return a;
 
-            for(int i = a; i <= b; i++) {
-                sum += i;
-            }
-
-            return sum;
+            return a + SumAll(a+1, b);
         }
     }
 }
