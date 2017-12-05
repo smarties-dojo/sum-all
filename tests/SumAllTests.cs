@@ -62,5 +62,19 @@ namespace tests
             // Assert
             result.Should().Be(45);
         }
+
+        [Fact]
+        public void Given_5_and_5_should_return_10()
+        {
+            // Arrange
+            var first = 5;
+            var second = 5;
+
+            // Act
+            var result = Program.SumAll(first, second);
+
+            // Assert
+            result.Should().Be(10);
+        }
     }
 }
