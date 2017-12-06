@@ -1,4 +1,4 @@
-module TestSafePrelude where
+module TestSumAll where
 
 import Test.HUnit
 import SumAll
